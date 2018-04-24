@@ -1,0 +1,17 @@
+<div id="login">
+  <article>
+    <header>
+      <h1>登录</h1>
+    </header>
+    <section>
+      <form @keyup.enter="onEnter">
+        <input v-model="username" type="text" autofocus autocomplete placeholder="请输入用户名">
+        <input v-model="password" type="password" placeholder="请输入密码">
+        <button @click="login" type="button">
+          登&nbsp;录&nbsp;
+          <i class="fa fa-gavel"></i>
+        </button>
+      </form>
+    </section>
+  </article>
+</div>

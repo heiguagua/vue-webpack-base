@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>首页</title>
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <main id="app">
+    <transition name="el-zoom-in-center">
+      <router-view></router-view>
+    </transition>
+  </main>
+  <script>
+    (function(window) {
+      var penguin = sessionStorage.getItem("URL");
+      if (penguin) {
+        window.url = JSON.parse(penguin);
+      } else {
+        window.url = {
+          master: "http://192.168.13.23:8080/dev"
+        }
+      }
+    })(window);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+@import "../common/styles/color";
+#login {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/login/background.jpg) repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  article {
+    margin-top: -200px;
+    header {
+      h1 {
+        color: $color-white;
+        font-size: 52px;
+        line-height: 100px;
+        width: 400px;
+        margin: 0;
+        text-align: right;
+        background: url(../assets/logo.png) no-repeat scroll -28px -13px/120px 120px;
+      }
+    }
+    section {
+      form {
+        background: url(../assets/login/input.jpg) no-repeat;
+        input {
+          float: left;
+          margin-left: 17px;
+          padding-left: 10px;
+          padding-right: 10px;
+          position: relative;
+          top: 12px;
+          width: 225px;
+          height: 52px;
+          line-height: 50px;
+          font-size: 16px;
+          color: $color-silver;
+          font-weight: bold;
+          border: none;
+          background-color: $color-gray-light-extra;
+          outline: none;
+          border-radius: 5px;
+          color: $color-black;
+        }
+        button {
+          height: 55px;
+          width: 85px;
+          margin: 11px 0 11px 16px;
+          font-weight: bold;
+          color: $color-white;
+          font-size: 15px;
+          background: $color-red;
+          cursor: pointer;
+          border-radius: 0 5px 5px 0;
+          padding: 0;
+          outline: none;
+          border: none;
+          &:hover {
+            opacity: 0.9;
+          }
+          &:active {
+            background: $color-danger;
+          }
+        }
+      }
+    }
+  }
+}
