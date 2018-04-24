@@ -1,4 +1,4 @@
-# Eagle
+# Vue Webpack Base
 <!-- 
 ![](sources/assets/favicon.ico) -->
 
