@@ -17,13 +17,8 @@
   </main>
   <script>
     (function(window) {
-      var penguin = sessionStorage.getItem("URL");
-      if (penguin) {
-        window.url = JSON.parse(penguin);
-      } else {
-        window.url = {
-          master: "http://192.168.13.23:8080/dev"
-        }
+      window.url = {
+        master: "http://localhost:8008/mock"
       }
     })(window);
   </script>

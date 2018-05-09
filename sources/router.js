@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 
 const Login = resolve => require(["./login/index.vue"], resolve);
 const Layout = resolve => require(["./layout/index.vue"], resolve);
+const Dashboard = resolve => require(['./dashboard/index.vue'], resolve)
 
 const Router = new VueRouter({
   routes: [
@@ -20,7 +21,16 @@ const Router = new VueRouter({
     },
     {
       path: "/layout",
-      component: Layout
+      component: Layout,
+      children: [
+        {
+          path: "dashboard",
+          meta: {
+            auth: false
+          },
+          component: Dashboard
+        }
+      ]
     }
   ]
 });
